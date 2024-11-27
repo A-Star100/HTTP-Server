@@ -1,0 +1,15 @@
+C:\Users\r_val\source\repos\WebEmbedderFinal\bin\Release\net6.0\WebEmbedderFinal.exe
+C:\Users\r_val\source\repos\WebEmbedderFinal\bin\Release\net6.0\WebEmbedderFinal.deps.json
+C:\Users\r_val\source\repos\WebEmbedderFinal\bin\Release\net6.0\WebEmbedderFinal.runtimeconfig.json
+C:\Users\r_val\source\repos\WebEmbedderFinal\bin\Release\net6.0\WebEmbedderFinal.dll
+C:\Users\r_val\source\repos\WebEmbedderFinal\bin\Release\net6.0\WebEmbedderFinal.pdb
+C:\Users\r_val\source\repos\WebEmbedderFinal\obj\Release\net6.0\WebEmbedderFinal.csproj.AssemblyReference.cache
+C:\Users\r_val\source\repos\WebEmbedderFinal\obj\Release\net6.0\WebEmbedderFinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\r_val\source\repos\WebEmbedderFinal\obj\Release\net6.0\WebEmbedderFinal.AssemblyInfoInputs.cache
+C:\Users\r_val\source\repos\WebEmbedderFinal\obj\Release\net6.0\WebEmbedderFinal.AssemblyInfo.cs
+C:\Users\r_val\source\repos\WebEmbedderFinal\obj\Release\net6.0\WebEmbedderFinal.csproj.CoreCompileInputs.cache
+C:\Users\r_val\source\repos\WebEmbedderFinal\obj\Release\net6.0\WebEmbedderFinal.dll
+C:\Users\r_val\source\repos\WebEmbedderFinal\obj\Release\net6.0\refint\WebEmbedderFinal.dll
+C:\Users\r_val\source\repos\WebEmbedderFinal\obj\Release\net6.0\WebEmbedderFinal.pdb
+C:\Users\r_val\source\repos\WebEmbedderFinal\obj\Release\net6.0\WebEmbedderFinal.genruntimeconfig.cache
+C:\Users\r_val\source\repos\WebEmbedderFinal\obj\Release\net6.0\ref\WebEmbedderFinal.dll
