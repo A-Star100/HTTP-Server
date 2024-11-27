@@ -19,7 +19,7 @@ Open the *Program.cs* file, then in your editor modify the C# however you please
 Use TextEdit (or any IDE) and open *file_server.c* and edit the C however you please!
 Then use clang to compile into an ARM64 binary by running
 `clang -arch arm64 -o MyApplication file_server.c -I/opt/homebrew/include -L/opt/homebrew/lib -lmicrohttpd`
-(The command above utilizes a ***Homebrew*** installation of *libmicrohttpd*, so users need libmicrohttpd installed from Homebrew if you use the command above. You can modify itto your liking. 
+(The command above utilizes a ***Homebrew*** installation of *libmicrohttpd*, so users need libmicrohttpd installed from Homebrew if you use the command above. You can modify it to your liking. 
 
 # How to open
 Most if not all releases of this app _**will be unsigned**_, so here's how to open them on both Windows and Mac.
