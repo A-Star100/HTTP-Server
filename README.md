@@ -6,7 +6,8 @@ The Windows build uses .NET Core 6.0 (meaning that Windows 7 and below can't run
 
 ## Mac
 The Mac build is plain C and ***requires*** **libmicrohttpd** installed for it to work, otherwise it won't. You can install libmicrohttpd using Homebrew by running
-`brew install libmicrohttpd`. To install Homebrew, run
+`brew install libmicrohttpd`. 
+To install Homebrew, run
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 It is a Unix executable so it should also work on Linux, but has not been tested there.
 
@@ -19,7 +20,9 @@ Open the *Program.cs* file, then in your editor modify the C# however you please
 Use TextEdit (or any IDE) and open *file_server.c* and edit the C however you please!
 Then use clang to compile into an ARM64 binary by running
 `clang -arch arm64 -o MyApplication file_server.c -I/opt/homebrew/include -L/opt/homebrew/lib -lmicrohttpd`
-(The command above utilizes a ***Homebrew*** installation of *libmicrohttpd*, so users need libmicrohttpd installed from Homebrew if you use the command above. You can modify it to your liking. 
+(The command above utilizes a ***Homebrew*** installation of *libmicrohttpd*, so users need libmicrohttpd installed from Homebrew if you use the command above. You can modify it to your liking).
+You can also use CMake by running
+`cmake -E chdir . /usr/bin/gcc main.c -o main` (this example assumes *main.c* is your C app) 
 
 # How to open
 Most if not all releases of this app _**will be unsigned**_, so here's how to open them on both Windows and Mac.
