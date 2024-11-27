@@ -10,6 +10,17 @@ The Mac build is plain C and ***requires*** **libmicrohttpd** installed for it t
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 It is a Unix executable so it should also work on Linux, but has not been tested there.
 
+# Compile from source
+If you want to compile from source and create modified versions, follow the instructions below:
+### On Windows
+Install [Visual Studio](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false) or any IDE that supports creating C# programs that use .NET Core.
+Open the *Program.cs* file, then in your editor modify the C# however you please. Once done, compile the app (in Visual Studio, click on the Build dropdown, then choose Release, then click Build Solution). Once done, you should see a folder with your compiled result.
+### On Mac
+Install any IDE that supports editing C. Open *file_server.c* and edit the C however you please!
+Then use clang to compile into an ARM64 binary by running
+`clang -arch arm64 -o MyApplication file_server.c -I/opt/homebrew/include -L/opt/homebrew/lib -lmicrohttpd`
+(The command above utilizes a ***Homebrew*** installation of *libmicrohttpd*, so users need libmicrohttpd installed from Homebrew if you use the command above. You can modify itto your liking. 
+
 # How to open
 Most if not all releases of this app _**will be unsigned**_, so here's how to open them on both Windows and Mac.
 ### On Windows
