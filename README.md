@@ -1,21 +1,21 @@
 # HTTP-Server
 HTTP-Server is an application which can start an HTTP server on Windows, Mac and Linux
 
-## Windows
+### Windows
 The Windows build uses .NET Core 6.0 (meaning that Windows 7 and below can't run it) and was compiled using Visual Studio 2022 and uses C#. It uses the HTTPListener to start an HTTP server and listen on a port you specify.
 
-## Mac
+### Mac
 The Mac build is plain C and ***requires*** **libmicrohttpd** installed for it to work, otherwise it won't. You can install libmicrohttpd using Homebrew by running
 `brew install libmicrohttpd`. 
 To install Homebrew, run
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 It is a Unix executable so it should also work on Linux, but has not been tested there.
 
-## Android
+### Android
 The Android build is minimal and can only serve HTML files and text data, not folders. It also lacks the configuration the Windows and Mac versions do.
 It uses the extension [Simple Web Server by Juan Antonio](https://groups.google.com/g/mitappinventortest/c/-tn-UY7YJGs/m/tpivqjkVCgAJ) and was compiled in [MIT App Inventor](https://appinventor.mit.edu/).
 
-# Compile from source
+## Compile from source
 If you want to compile from source and create modified versions, follow the instructions below:
 ### Windows
 Install [Visual Studio](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false) or any IDE that supports creating C# programs that use .NET Core.
@@ -30,7 +30,7 @@ You can also use CMake by running
 ### Android
 You'll need [Android Studio](https://developer.android.com/studio) to compile the decompiled source code. Learn more about Gradle compiling [here](https://stackoverflow.com/questions/39538021/compiling-android-source-code) 
 
-# How to open
+## How to open
 Most if not all releases of this app _**will be unsigned**_, so here's how to open them Windows, Mac, and Android
 ### On Windows
 When you try to open the app, you will come across a SmartScreen warning. Press "More..." and then click "Run Anyway".
