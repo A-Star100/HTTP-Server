@@ -13,7 +13,7 @@ It is a Unix executable so it should also work on Linux, but has not been tested
 
 ## Android
 The Android build is minimal and can only serve HTML files and text data, not folders. It also lacks the configuration the Windows and Mac versions do.
-It uses the extension [Simple Web Server by Juan Antonio](https://groups.google.com/g/mitappinventortest/c/-tn-UY7YJGs/m/tpivqjkVCgAJ) and was compiled in [Kodular](https://www.kodular.io/).
+It uses the extension [Simple Web Server by Juan Antonio](https://groups.google.com/g/mitappinventortest/c/-tn-UY7YJGs/m/tpivqjkVCgAJ) and was compiled in [MIT App Inventor](https://appinventor.mit.edu/).
 
 # Compile from source
 If you want to compile from source and create modified versions, follow the instructions below:
