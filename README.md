@@ -28,7 +28,7 @@ Then use clang to compile into an ARM64 binary by running
 You can also use CMake by running
 `cmake -E chdir . /usr/bin/gcc main.c -o main` (this example assumes *main.c* is your C app) 
 ### Android
-You can use [Android Studio](https://developer.android.com/studio) to compile the decompiled source code or compile with Gradle [by using this method].(https://stackoverflow.com/questions/39538021/compiling-android-source-code) 
+You can use [Android Studio](https://developer.android.com/studio) to compile the decompiled source code or compile with Gradle [by using this method](https://stackoverflow.com/questions/39538021/compiling-android-source-code). 
 
 ## How to open
 Most if not all releases of this app _**will be unsigned**_, so here's how to open them Windows, Mac, and Android
