@@ -1,5 +1,5 @@
 # HTTP-Server
-HTTP-Server is an application which can start an HTTP server on Windows and Mac.
+HTTP-Server is an application which can start an HTTP server on Windows, Mac and Linux
 
 ## Windows
 The Windows build uses .NET Core 6.0 (meaning that Windows 7 and below can't run it) and was compiled using Visual Studio 2022 and uses C#. It uses the HTTPListener to start an HTTP server and listen on a port you specify.
