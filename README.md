@@ -35,7 +35,7 @@ Most if not all releases of this app _**will be unsigned**_, so here's how to op
 ### On Windows
 When you try to open the app, you will come across a SmartScreen warning. Press "More..." and then click "Run Anyway".
 ### On Mac
-When you try to open the app, you will come across a "Developer cannot be verified" warning. Open it normally once, then after the failure, right-click, then click Open, then click Open in the same dialog. 
+When you try to open the app, you will come across a "Developer cannot be verified" warning. Open it normally once, then after the failure, right-click, then click Open, then click Open in the new warning dialog. 
 ### On Android
 When you install the app itself, you will be warned that "[App name] cannot install apps from unknown sources". Go to settings, then Apps & Notifications, then Special App Access, then Install unknown apps and select the browser you want to use to download APK files from. 
 (this process varies depending on what phone you use).
