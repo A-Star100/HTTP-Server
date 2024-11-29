@@ -12,8 +12,7 @@ To install Homebrew, run
 It is a Unix executable so it should also work on Linux, but has not been tested there.
 
 ### Android
-The Android build is minimal and can only serve HTML files and text data, not folders. It also lacks the configuration the Windows and Mac versions do.
-It uses the extension [Simple Web Server by Juan Antonio](https://groups.google.com/g/mitappinventortest/c/-tn-UY7YJGs/m/tpivqjkVCgAJ) and was compiled in [MIT App Inventor](https://appinventor.mit.edu/).
+The Android build is up and coming in a new form.
 
 ## Compile from source
 If you want to compile from source and create modified versions, follow the instructions below:
@@ -28,7 +27,7 @@ Then use clang to compile into an ARM64 binary by running
 You can also use CMake by running
 `cmake -E chdir . /usr/bin/gcc main.c -o main` (this example assumes *main.c* is your C app) 
 ### Android
-You can use [Android Studio](https://developer.android.com/studio) to compile the decompiled source code or compile with Gradle [by using this method](https://stackoverflow.com/questions/39538021/compiling-android-source-code). 
+You can use [Android Studio](https://developer.android.com/studio) to compile the decompiled source code or compile with *just* Gradle [by using this method](https://stackoverflow.com/questions/39538021/compiling-android-source-code). 
 
 ## How to open
 Most if not all releases of this app _**will be unsigned**_, so here's how to open them Windows, Mac, and Android
