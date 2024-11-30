@@ -22,7 +22,13 @@ Open the *Program.cs* file, then in your editor modify the C# however you please
 ### Mac
 Use TextEdit (or any IDE) and open *file_server.c* and edit the C however you please!
 Then use clang to compile into an ARM64 binary by running
-`clang -arch arm64 -o MyApplication file_server.c -I/opt/homebrew/include -L/opt/homebrew/lib -lmicrohttpd`
+`clang -arch arm64 -o MyApplication-ARM file_server.c -I/opt/homebrew/include -L/opt/homebrew/lib -lmicrohttpd`
+then compile into an Intel (x86_64) binary by running
+`clang -arch x86_64 -o MyApplication-x86_64 file_server.c -I/opt/homebrew/include -L/opt/homebrew/lib -lmicrohttpd`
+then use lipo to compile both into a universal (x86_64 and ARM64 compatible binary) by running
+`lipo -create -output MyApplication-Universal MyApplication-x86_64 MyApplication-ARM`
+and you have created a universal binary of the program by yourself! Congratulations!
+
 (The command above utilizes a ***Homebrew*** installation of *libmicrohttpd*, so users need libmicrohttpd installed from Homebrew if you use the command above. You can modify it to your liking).
 You can also use CMake by running
 `cmake -E chdir . /usr/bin/gcc main.c -o main` (this example assumes *main.c* is your C app) 
