@@ -12,7 +12,7 @@ To install Homebrew, run
 It is a Unix executable so it should also work on Linux, but has not been tested there.
 
 ### Android
-The Android build is up and coming in a new form.
+The Android build was created and compiled with [MIT App Inventor](https://appinventor.mit.edu) and is experimental (so it may not work as seamlessly as the Windows and Mac versions), but still does something nonetheless.
 
 ## Compile from source
 If you want to compile from source and create modified versions, follow the instructions below:
