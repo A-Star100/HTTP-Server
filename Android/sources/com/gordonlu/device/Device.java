@@ -142,7 +142,7 @@ public class Device extends AndroidNonvisibleComponent {
 
     @SimpleProperty(description = "Returns the Android version of the phone.")
     public String AndroidVersion() {
-        return Build.VERSION.SDK_INT == 9 ? "2.3" : Build.VERSION.SDK_INT == 10 ? "2.3.3" : Build.VERSION.SDK_INT == 11 ? "3.0" : Build.VERSION.SDK_INT == 12 ? "3.1" : Build.VERSION.SDK_INT == 13 ? "3.2" : Build.VERSION.SDK_INT == 14 ? "4.0" : Build.VERSION.SDK_INT == 15 ? "4.0.3" : Build.VERSION.SDK_INT == 16 ? "4.1" : Build.VERSION.SDK_INT == 17 ? "4.2" : Build.VERSION.SDK_INT == 18 ? "4.3" : Build.VERSION.SDK_INT == 19 ? "4.4" : Build.VERSION.SDK_INT == 20 ? "4.4W" : Build.VERSION.SDK_INT == 21 ? "5.0" : Build.VERSION.SDK_INT == 22 ? "5.1" : Build.VERSION.SDK_INT == 23 ? "6.0" : Build.VERSION.SDK_INT == 24 ? "7.0" : Build.VERSION.SDK_INT == 25 ? "7.1" : Build.VERSION.SDK_INT == 26 ? "8.0" : Build.VERSION.SDK_INT == 27 ? "8.1" : Build.VERSION.SDK_INT == 28 ? "9" : Build.VERSION.SDK_INT == 29 ? "10" : Build.VERSION.SDK_INT == 30 ? "11" : Build.VERSION.SDK_INT == 31 ? "12" : "UNKNOWN";
+        return Build.VERSION.SDK_INT == 19 ? "4.4" : Build.VERSION.SDK_INT == 20 ? "4.4W" : Build.VERSION.SDK_INT == 21 ? "5.0" : Build.VERSION.SDK_INT == 22 ? "5.1" : Build.VERSION.SDK_INT == 23 ? "6.0" : Build.VERSION.SDK_INT == 24 ? "7.0" : Build.VERSION.SDK_INT == 25 ? "7.1" : Build.VERSION.SDK_INT == 26 ? "8.0" : Build.VERSION.SDK_INT == 27 ? "8.1" : Build.VERSION.SDK_INT == 28 ? "9" : Build.VERSION.SDK_INT == 29 ? "10" : Build.VERSION.SDK_INT == 30 ? "11" : Build.VERSION.SDK_INT == 31 ? "12" : "UNKNOWN";
     }
 
     @SimpleFunction(description = "Returns the package name of the current running application.")
@@ -194,15 +194,7 @@ public class Device extends AndroidNonvisibleComponent {
     @SimpleProperty(description = "Returns true if the device is charging, else false.")
     public boolean BatteryCharging() {
         int intExtra = getBatteryStatus().getIntExtra("plugged", -1);
-        boolean z = false;
-        boolean z2 = intExtra == 1 || intExtra == 2;
-        if (Build.VERSION.SDK_INT <= 16) {
-            return z2;
-        }
-        if (z2 || intExtra == 4) {
-            z = true;
-        }
-        return z;
+        return (intExtra == 1 || intExtra == 2) || intExtra == 4;
     }
 
     @SimpleFunction(description = "Returns the health value of the phone's battery.")
@@ -642,7 +634,7 @@ public class Device extends AndroidNonvisibleComponent {
 
     @SimpleFunction(description = "Checks if 'Automatic Date and Time' is enabled in Settings.")
     public boolean IsDateAndTimeAutomatic() {
-        return Build.VERSION.SDK_INT >= 17 ? Settings.Global.getInt(this.context.getContentResolver(), "auto_time", 0) == 1 : Settings.System.getInt(this.context.getContentResolver(), "auto_time", 0) == 1;
+        return Settings.Global.getInt(this.context.getContentResolver(), "auto_time", 0) == 1;
     }
 
     @SimpleFunction(description = "Tests if the email address is valid.")
@@ -797,16 +789,14 @@ public class Device extends AndroidNonvisibleComponent {
 
     @SimpleFunction(description = "Returns the height of the navigation bar of the device.")
     public int NavigationBarHeight() {
-        if (Build.VERSION.SDK_INT >= 17) {
-            DisplayMetrics displayMetrics = new DisplayMetrics();
-            WindowManager windowManager = (WindowManager) this.context.getSystemService("window");
-            windowManager.getDefaultDisplay().getMetrics(displayMetrics);
-            int i = displayMetrics.heightPixels;
-            windowManager.getDefaultDisplay().getRealMetrics(displayMetrics);
-            int i2 = displayMetrics.heightPixels;
-            if (i2 > i) {
-                return i2 - i;
-            }
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        WindowManager windowManager = (WindowManager) this.context.getSystemService("window");
+        windowManager.getDefaultDisplay().getMetrics(displayMetrics);
+        int i = displayMetrics.heightPixels;
+        windowManager.getDefaultDisplay().getRealMetrics(displayMetrics);
+        int i2 = displayMetrics.heightPixels;
+        if (i2 > i) {
+            return i2 - i;
         }
         return 0;
     }

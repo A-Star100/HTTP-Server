@@ -3,12 +3,12 @@ package appinventor.ai_sonicforces207.p260_servidor_web;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentTransaction;
 import com.KIO4_SimpleWebServer.KIO4_SimpleWebServer;
-import com.google.appinventor.components.common.Permission;
 import com.google.appinventor.components.common.PropertyTypeConstants;
 import com.google.appinventor.components.runtime.AppInventorCompatActivity;
 import com.google.appinventor.components.runtime.Button;
 import com.google.appinventor.components.runtime.Component;
 import com.google.appinventor.components.runtime.EventDispatcher;
+import com.google.appinventor.components.runtime.FilePicker;
 import com.google.appinventor.components.runtime.Form;
 import com.google.appinventor.components.runtime.HandlesEventDispatching;
 import com.google.appinventor.components.runtime.HorizontalArrangement;
@@ -59,29 +59,36 @@ public class Screen1 extends Form implements Runnable {
     static final SimpleSymbol Lit0 = ((SimpleSymbol) new SimpleSymbol("Screen1").readResolve());
     static final SimpleSymbol Lit1 = ((SimpleSymbol) new SimpleSymbol("getMessage").readResolve());
     static final SimpleSymbol Lit10;
-    static final SimpleSymbol Lit100 = ((SimpleSymbol) new SimpleSymbol("is-bound-in-form-environment").readResolve());
-    static final SimpleSymbol Lit101 = ((SimpleSymbol) new SimpleSymbol("add-to-global-var-environment").readResolve());
-    static final SimpleSymbol Lit102 = ((SimpleSymbol) new SimpleSymbol("add-to-events").readResolve());
-    static final SimpleSymbol Lit103 = ((SimpleSymbol) new SimpleSymbol("add-to-components").readResolve());
-    static final SimpleSymbol Lit104 = ((SimpleSymbol) new SimpleSymbol("add-to-global-vars").readResolve());
-    static final SimpleSymbol Lit105 = ((SimpleSymbol) new SimpleSymbol("add-to-form-do-after-creation").readResolve());
-    static final SimpleSymbol Lit106 = ((SimpleSymbol) new SimpleSymbol("send-error").readResolve());
-    static final SimpleSymbol Lit107 = ((SimpleSymbol) new SimpleSymbol("dispatchEvent").readResolve());
-    static final SimpleSymbol Lit108 = ((SimpleSymbol) new SimpleSymbol("dispatchGenericEvent").readResolve());
-    static final SimpleSymbol Lit109 = ((SimpleSymbol) new SimpleSymbol("lookup-handler").readResolve());
+    static final FString Lit100 = new FString("com.google.appinventor.components.runtime.Web");
+    static final FString Lit101 = new FString("com.gordonlu.device.Device");
+    static final FString Lit102 = new FString("com.gordonlu.device.Device");
+    static final SimpleSymbol Lit103 = ((SimpleSymbol) new SimpleSymbol("get-simple-name").readResolve());
+    static final SimpleSymbol Lit104 = ((SimpleSymbol) new SimpleSymbol("android-log-form").readResolve());
+    static final SimpleSymbol Lit105 = ((SimpleSymbol) new SimpleSymbol("add-to-form-environment").readResolve());
+    static final SimpleSymbol Lit106 = ((SimpleSymbol) new SimpleSymbol("lookup-in-form-environment").readResolve());
+    static final SimpleSymbol Lit107 = ((SimpleSymbol) new SimpleSymbol("is-bound-in-form-environment").readResolve());
+    static final SimpleSymbol Lit108 = ((SimpleSymbol) new SimpleSymbol("add-to-global-var-environment").readResolve());
+    static final SimpleSymbol Lit109 = ((SimpleSymbol) new SimpleSymbol("add-to-events").readResolve());
     static final SimpleSymbol Lit11 = ((SimpleSymbol) new SimpleSymbol("Sizing").readResolve());
-    static final SimpleSymbol Lit110;
+    static final SimpleSymbol Lit110 = ((SimpleSymbol) new SimpleSymbol("add-to-components").readResolve());
+    static final SimpleSymbol Lit111 = ((SimpleSymbol) new SimpleSymbol("add-to-global-vars").readResolve());
+    static final SimpleSymbol Lit112 = ((SimpleSymbol) new SimpleSymbol("add-to-form-do-after-creation").readResolve());
+    static final SimpleSymbol Lit113 = ((SimpleSymbol) new SimpleSymbol("send-error").readResolve());
+    static final SimpleSymbol Lit114 = ((SimpleSymbol) new SimpleSymbol("dispatchEvent").readResolve());
+    static final SimpleSymbol Lit115 = ((SimpleSymbol) new SimpleSymbol("dispatchGenericEvent").readResolve());
+    static final SimpleSymbol Lit116 = ((SimpleSymbol) new SimpleSymbol("lookup-handler").readResolve());
+    static final SimpleSymbol Lit117;
     static final SimpleSymbol Lit12 = ((SimpleSymbol) new SimpleSymbol("Theme").readResolve());
     static final SimpleSymbol Lit13 = ((SimpleSymbol) new SimpleSymbol("Title").readResolve());
-    static final SimpleSymbol Lit14 = ((SimpleSymbol) new SimpleSymbol("AskForPermission").readResolve());
-    static final PairWithPosition Lit15;
-    static final SimpleSymbol Lit16 = ((SimpleSymbol) new SimpleSymbol("Screen1$Initialize").readResolve());
-    static final SimpleSymbol Lit17 = ((SimpleSymbol) new SimpleSymbol("Initialize").readResolve());
-    static final FString Lit18 = new FString("com.google.appinventor.components.runtime.HorizontalArrangement");
-    static final SimpleSymbol Lit19 = ((SimpleSymbol) new SimpleSymbol("HorizontalArrangement1").readResolve());
+    static final SimpleSymbol Lit14 = ((SimpleSymbol) new SimpleSymbol("VersionCode").readResolve());
+    static final IntNum Lit15 = IntNum.make(2);
+    static final SimpleSymbol Lit16 = ((SimpleSymbol) new SimpleSymbol("VersionName").readResolve());
+    static final SimpleSymbol Lit17 = ((SimpleSymbol) new SimpleSymbol("Screen1$Initialize").readResolve());
+    static final SimpleSymbol Lit18 = ((SimpleSymbol) new SimpleSymbol("Initialize").readResolve());
+    static final FString Lit19 = new FString("com.google.appinventor.components.runtime.HorizontalArrangement");
     static final SimpleSymbol Lit2 = ((SimpleSymbol) new SimpleSymbol("*the-null-value*").readResolve());
-    static final SimpleSymbol Lit20 = ((SimpleSymbol) new SimpleSymbol("AlignVertical").readResolve());
-    static final IntNum Lit21 = IntNum.make(2);
+    static final SimpleSymbol Lit20 = ((SimpleSymbol) new SimpleSymbol("HorizontalArrangement1").readResolve());
+    static final SimpleSymbol Lit21 = ((SimpleSymbol) new SimpleSymbol("AlignVertical").readResolve());
     static final SimpleSymbol Lit22 = ((SimpleSymbol) new SimpleSymbol("Width").readResolve());
     static final IntNum Lit23 = IntNum.make(-2);
     static final FString Lit24 = new FString("com.google.appinventor.components.runtime.HorizontalArrangement");
@@ -129,44 +136,44 @@ public class Screen1 extends Form implements Runnable {
     static final FString Lit62 = new FString("com.google.appinventor.components.runtime.Button");
     static final PairWithPosition Lit63;
     static final SimpleSymbol Lit64 = ((SimpleSymbol) new SimpleSymbol("Button1$Click").readResolve());
-    static final FString Lit65 = new FString("com.KIO4_SimpleWebServer.KIO4_SimpleWebServer");
-    static final FString Lit66 = new FString("com.KIO4_SimpleWebServer.KIO4_SimpleWebServer");
-    static final FString Lit67 = new FString("com.google.appinventor.components.runtime.Notifier");
-    static final FString Lit68 = new FString("com.google.appinventor.components.runtime.Notifier");
-    static final SimpleSymbol Lit69 = ((SimpleSymbol) new SimpleSymbol("Notifier1$TextInputCanceled").readResolve());
+    static final FString Lit65 = new FString("com.google.appinventor.components.runtime.FilePicker");
+    static final SimpleSymbol Lit66 = ((SimpleSymbol) new SimpleSymbol("FilePicker1").readResolve());
+    static final SimpleSymbol Lit67 = ((SimpleSymbol) new SimpleSymbol("Visible").readResolve());
+    static final FString Lit68 = new FString("com.google.appinventor.components.runtime.FilePicker");
+    static final SimpleSymbol Lit69 = ((SimpleSymbol) new SimpleSymbol("Selection").readResolve());
     static final SimpleSymbol Lit7;
-    static final SimpleSymbol Lit70 = ((SimpleSymbol) new SimpleSymbol("TextInputCanceled").readResolve());
-    static final SimpleSymbol Lit71 = ((SimpleSymbol) new SimpleSymbol("$response").readResolve());
+    static final PairWithPosition Lit70;
+    static final PairWithPosition Lit71;
     static final PairWithPosition Lit72;
     static final PairWithPosition Lit73;
-    static final PairWithPosition Lit74;
-    static final PairWithPosition Lit75;
-    static final PairWithPosition Lit76;
-    static final PairWithPosition Lit77;
-    static final SimpleSymbol Lit78 = ((SimpleSymbol) new SimpleSymbol("ApplicationSpecificDirectory").readResolve());
-    static final PairWithPosition Lit79;
+    static final SimpleSymbol Lit74 = ((SimpleSymbol) new SimpleSymbol("FilePicker1$AfterPicking").readResolve());
+    static final SimpleSymbol Lit75 = ((SimpleSymbol) new SimpleSymbol("AfterPicking").readResolve());
+    static final FString Lit76 = new FString("com.KIO4_SimpleWebServer.KIO4_SimpleWebServer");
+    static final FString Lit77 = new FString("com.KIO4_SimpleWebServer.KIO4_SimpleWebServer");
+    static final FString Lit78 = new FString("com.google.appinventor.components.runtime.Notifier");
+    static final FString Lit79 = new FString("com.google.appinventor.components.runtime.Notifier");
     static final SimpleSymbol Lit8 = ((SimpleSymbol) new SimpleSymbol("ScreenOrientation").readResolve());
-    static final PairWithPosition Lit80;
+    static final SimpleSymbol Lit80 = ((SimpleSymbol) new SimpleSymbol("$response").readResolve());
     static final PairWithPosition Lit81;
-    static final PairWithPosition Lit82;
+    static final SimpleSymbol Lit82 = ((SimpleSymbol) new SimpleSymbol("ApplicationSpecificDirectory").readResolve());
     static final PairWithPosition Lit83;
-    static final SimpleSymbol Lit84 = ((SimpleSymbol) new SimpleSymbol("Notifier1$AfterTextInput").readResolve());
-    static final SimpleSymbol Lit85 = ((SimpleSymbol) new SimpleSymbol("AfterTextInput").readResolve());
-    static final SimpleSymbol Lit86 = ((SimpleSymbol) new SimpleSymbol("$choice").readResolve());
+    static final PairWithPosition Lit84;
+    static final PairWithPosition Lit85;
+    static final PairWithPosition Lit86;
     static final PairWithPosition Lit87;
-    static final SimpleSymbol Lit88 = ((SimpleSymbol) new SimpleSymbol("StopServer").readResolve());
-    static final SimpleSymbol Lit89 = ((SimpleSymbol) new SimpleSymbol("Notifier1$AfterChoosing").readResolve());
+    static final SimpleSymbol Lit88 = ((SimpleSymbol) new SimpleSymbol("Open").readResolve());
+    static final SimpleSymbol Lit89 = ((SimpleSymbol) new SimpleSymbol("Notifier1$AfterTextInput").readResolve());
     static final SimpleSymbol Lit9 = ((SimpleSymbol) new SimpleSymbol("ShowListsAsJson").readResolve());
-    static final SimpleSymbol Lit90 = ((SimpleSymbol) new SimpleSymbol("AfterChoosing").readResolve());
-    static final FString Lit91 = new FString("com.google.appinventor.components.runtime.Web");
-    static final SimpleSymbol Lit92 = ((SimpleSymbol) new SimpleSymbol("Web1").readResolve());
-    static final FString Lit93 = new FString("com.google.appinventor.components.runtime.Web");
-    static final FString Lit94 = new FString("com.gordonlu.device.Device");
-    static final FString Lit95 = new FString("com.gordonlu.device.Device");
-    static final SimpleSymbol Lit96 = ((SimpleSymbol) new SimpleSymbol("get-simple-name").readResolve());
-    static final SimpleSymbol Lit97 = ((SimpleSymbol) new SimpleSymbol("android-log-form").readResolve());
-    static final SimpleSymbol Lit98 = ((SimpleSymbol) new SimpleSymbol("add-to-form-environment").readResolve());
-    static final SimpleSymbol Lit99 = ((SimpleSymbol) new SimpleSymbol("lookup-in-form-environment").readResolve());
+    static final SimpleSymbol Lit90 = ((SimpleSymbol) new SimpleSymbol("AfterTextInput").readResolve());
+    static final SimpleSymbol Lit91 = ((SimpleSymbol) new SimpleSymbol("Notifier1$TextInputCanceled").readResolve());
+    static final SimpleSymbol Lit92 = ((SimpleSymbol) new SimpleSymbol("TextInputCanceled").readResolve());
+    static final SimpleSymbol Lit93 = ((SimpleSymbol) new SimpleSymbol("$choice").readResolve());
+    static final PairWithPosition Lit94;
+    static final SimpleSymbol Lit95 = ((SimpleSymbol) new SimpleSymbol("StopServer").readResolve());
+    static final SimpleSymbol Lit96 = ((SimpleSymbol) new SimpleSymbol("Notifier1$AfterChoosing").readResolve());
+    static final SimpleSymbol Lit97 = ((SimpleSymbol) new SimpleSymbol("AfterChoosing").readResolve());
+    static final FString Lit98 = new FString("com.google.appinventor.components.runtime.Web");
+    static final SimpleSymbol Lit99 = ((SimpleSymbol) new SimpleSymbol("Web1").readResolve());
     public static Screen1 Screen1;
     static final ModuleMethod lambda$Fn1 = null;
     static final ModuleMethod lambda$Fn10 = null;
@@ -176,6 +183,8 @@ public class Screen1 extends Form implements Runnable {
     static final ModuleMethod lambda$Fn14 = null;
     static final ModuleMethod lambda$Fn15 = null;
     static final ModuleMethod lambda$Fn16 = null;
+    static final ModuleMethod lambda$Fn17 = null;
+    static final ModuleMethod lambda$Fn18 = null;
     static final ModuleMethod lambda$Fn2 = null;
     static final ModuleMethod lambda$Fn3 = null;
     static final ModuleMethod lambda$Fn4 = null;
@@ -202,6 +211,8 @@ public class Screen1 extends Form implements Runnable {
     public final ModuleMethod Button1$Click;
     public TextBox CampoDeTexto1;
     public Device Device1;
+    public FilePicker FilePicker1;
+    public final ModuleMethod FilePicker1$AfterPicking;
     public HorizontalArrangement HorizontalArrangement1;
     public HorizontalArrangement HorizontalArrangement2;
     public KIO4_SimpleWebServer KIO4_SimpleWebServer1;
@@ -239,59 +250,57 @@ public class Screen1 extends Form implements Runnable {
 
     static {
         SimpleSymbol simpleSymbol = (SimpleSymbol) new SimpleSymbol("any").readResolve();
-        Lit110 = simpleSymbol;
-        Lit87 = PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 405603), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 405598);
+        Lit117 = simpleSymbol;
+        Lit94 = PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 458851), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 458846);
         SimpleSymbol simpleSymbol2 = (SimpleSymbol) new SimpleSymbol(PropertyTypeConstants.PROPERTY_TYPE_TEXT).readResolve();
         Lit7 = simpleSymbol2;
-        Lit83 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 398566), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 398561), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 398555);
-        Lit82 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 398520), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 398515), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 398509);
+        Lit87 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 443108), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 443103), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 443097);
+        Lit86 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 443062), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 443057), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 443051);
         SimpleSymbol simpleSymbol3 = (SimpleSymbol) new SimpleSymbol(PropertyTypeConstants.PROPERTY_TYPE_BOOLEAN).readResolve();
         Lit10 = simpleSymbol3;
-        Lit81 = PairWithPosition.make(simpleSymbol3, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 398449);
-        Lit80 = PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 398226);
-        Lit79 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 398209), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 398203);
-        Lit77 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 397950), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 397945), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 397939);
-        Lit76 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 397904), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 397899), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 397893);
-        Lit75 = PairWithPosition.make(simpleSymbol3, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 397833);
-        Lit74 = PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 397610);
-        Lit73 = PairWithPosition.make(simpleSymbol3, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 397479);
-        Lit72 = PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 397467), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 397462);
-        Lit63 = PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 340046);
-        Lit58 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol3, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 303352), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 303347), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 303342), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 303337), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 303331);
-        Lit49 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol3, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 229703), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 229698), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 229692);
-        Lit42 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 192972), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 192967), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 192961);
-        Lit41 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 192926), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 192921), "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 192915);
-        Lit40 = PairWithPosition.make(simpleSymbol3, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 192855);
-        Lit35 = PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 192632);
-        Lit15 = PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733007173389_7633426589721054208-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 82086);
+        Lit85 = PairWithPosition.make(simpleSymbol3, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 442991);
+        Lit84 = PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 442768);
+        Lit83 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 442751), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 442745);
+        Lit81 = PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 442473), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 442468);
+        Lit73 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 393679), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 393674), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 393668);
+        Lit72 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 393633), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 393628), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 393622);
+        Lit71 = PairWithPosition.make(simpleSymbol3, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 393562);
+        Lit70 = PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 393339);
+        Lit63 = PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 348238);
+        Lit58 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol3, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 311544), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 311539), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 311534), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 311529), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 311523);
+        Lit49 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol3, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 237795), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 237790), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 237784);
+        Lit42 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 201164), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 201159), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 201153);
+        Lit41 = PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 201118), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 201113), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 201107);
+        Lit40 = PairWithPosition.make(simpleSymbol3, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 201047);
+        Lit35 = PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen1.yail", 200824);
     }
 
     public Screen1() {
         ModuleInfo.register(this);
         frame frame2 = new frame();
         frame2.$main = this;
-        this.get$Mnsimple$Mnname = new ModuleMethod(frame2, 1, Lit96, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        this.get$Mnsimple$Mnname = new ModuleMethod(frame2, 1, Lit103, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         this.onCreate = new ModuleMethod(frame2, 2, "onCreate", FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        this.android$Mnlog$Mnform = new ModuleMethod(frame2, 3, Lit97, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        this.add$Mnto$Mnform$Mnenvironment = new ModuleMethod(frame2, 4, Lit98, 8194);
-        this.lookup$Mnin$Mnform$Mnenvironment = new ModuleMethod(frame2, 5, Lit99, 8193);
-        this.is$Mnbound$Mnin$Mnform$Mnenvironment = new ModuleMethod(frame2, 7, Lit100, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        this.add$Mnto$Mnglobal$Mnvar$Mnenvironment = new ModuleMethod(frame2, 8, Lit101, 8194);
-        this.add$Mnto$Mnevents = new ModuleMethod(frame2, 9, Lit102, 8194);
-        this.add$Mnto$Mncomponents = new ModuleMethod(frame2, 10, Lit103, 16388);
-        this.add$Mnto$Mnglobal$Mnvars = new ModuleMethod(frame2, 11, Lit104, 8194);
-        this.add$Mnto$Mnform$Mndo$Mnafter$Mncreation = new ModuleMethod(frame2, 12, Lit105, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        this.send$Mnerror = new ModuleMethod(frame2, 13, Lit106, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        this.android$Mnlog$Mnform = new ModuleMethod(frame2, 3, Lit104, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        this.add$Mnto$Mnform$Mnenvironment = new ModuleMethod(frame2, 4, Lit105, 8194);
+        this.lookup$Mnin$Mnform$Mnenvironment = new ModuleMethod(frame2, 5, Lit106, 8193);
+        this.is$Mnbound$Mnin$Mnform$Mnenvironment = new ModuleMethod(frame2, 7, Lit107, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        this.add$Mnto$Mnglobal$Mnvar$Mnenvironment = new ModuleMethod(frame2, 8, Lit108, 8194);
+        this.add$Mnto$Mnevents = new ModuleMethod(frame2, 9, Lit109, 8194);
+        this.add$Mnto$Mncomponents = new ModuleMethod(frame2, 10, Lit110, 16388);
+        this.add$Mnto$Mnglobal$Mnvars = new ModuleMethod(frame2, 11, Lit111, 8194);
+        this.add$Mnto$Mnform$Mndo$Mnafter$Mncreation = new ModuleMethod(frame2, 12, Lit112, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        this.send$Mnerror = new ModuleMethod(frame2, 13, Lit113, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         this.process$Mnexception = new ModuleMethod(frame2, 14, "process-exception", FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        this.dispatchEvent = new ModuleMethod(frame2, 15, Lit107, 16388);
-        this.dispatchGenericEvent = new ModuleMethod(frame2, 16, Lit108, 16388);
-        this.lookup$Mnhandler = new ModuleMethod(frame2, 17, Lit109, 8194);
+        this.dispatchEvent = new ModuleMethod(frame2, 15, Lit114, 16388);
+        this.dispatchGenericEvent = new ModuleMethod(frame2, 16, Lit115, 16388);
+        this.lookup$Mnhandler = new ModuleMethod(frame2, 17, Lit116, 8194);
         ModuleMethod moduleMethod = new ModuleMethod(frame2, 18, (Object) null, 0);
-        moduleMethod.setProperty("source-location", "/tmp/runtime1014039805804809759.scm:634");
+        moduleMethod.setProperty("source-location", "/tmp/runtime3632589216760299250.scm:634");
         lambda$Fn1 = moduleMethod;
         this.$define = new ModuleMethod(frame2, 19, "$define", 0);
         lambda$Fn2 = new ModuleMethod(frame2, 20, (Object) null, 0);
-        this.Screen1$Initialize = new ModuleMethod(frame2, 21, Lit16, 0);
+        this.Screen1$Initialize = new ModuleMethod(frame2, 21, Lit17, 0);
         lambda$Fn3 = new ModuleMethod(frame2, 22, (Object) null, 0);
         lambda$Fn4 = new ModuleMethod(frame2, 23, (Object) null, 0);
         lambda$Fn5 = new ModuleMethod(frame2, 24, (Object) null, 0);
@@ -310,9 +319,12 @@ public class Screen1 extends Form implements Runnable {
         lambda$Fn15 = new ModuleMethod(frame2, 37, (Object) null, 0);
         lambda$Fn16 = new ModuleMethod(frame2, 38, (Object) null, 0);
         this.Button1$Click = new ModuleMethod(frame2, 39, Lit64, 0);
-        this.Notifier1$TextInputCanceled = new ModuleMethod(frame2, 40, Lit69, 0);
-        this.Notifier1$AfterTextInput = new ModuleMethod(frame2, 41, Lit84, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        this.Notifier1$AfterChoosing = new ModuleMethod(frame2, 42, Lit89, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        lambda$Fn17 = new ModuleMethod(frame2, 40, (Object) null, 0);
+        lambda$Fn18 = new ModuleMethod(frame2, 41, (Object) null, 0);
+        this.FilePicker1$AfterPicking = new ModuleMethod(frame2, 42, Lit74, 0);
+        this.Notifier1$AfterTextInput = new ModuleMethod(frame2, 43, Lit89, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        this.Notifier1$TextInputCanceled = new ModuleMethod(frame2, 44, Lit91, 0);
+        this.Notifier1$AfterChoosing = new ModuleMethod(frame2, 45, Lit96, FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
     }
 
     public Object lookupInFormEnvironment(Symbol symbol) {
@@ -352,45 +364,50 @@ public class Screen1 extends Form implements Runnable {
             try {
                 ((Runnable) find2).run();
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit3, Lit4, Lit5);
-                    SimpleSymbol simpleSymbol2 = Lit6;
-                    SimpleSymbol simpleSymbol3 = Lit7;
-                    runtime.setAndCoerceProperty$Ex(simpleSymbol, simpleSymbol2, "HTTP-Server", simpleSymbol3);
-                    runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit8, "unspecified", simpleSymbol3);
+                    SimpleSymbol simpleSymbol2 = Lit3;
+                    IntNum intNum = Lit4;
+                    SimpleSymbol simpleSymbol3 = Lit5;
+                    runtime.setAndCoerceProperty$Ex(simpleSymbol, simpleSymbol2, intNum, simpleSymbol3);
+                    SimpleSymbol simpleSymbol4 = Lit6;
+                    SimpleSymbol simpleSymbol5 = Lit7;
+                    runtime.setAndCoerceProperty$Ex(simpleSymbol, simpleSymbol4, "HTTP-Server", simpleSymbol5);
+                    runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit8, "unspecified", simpleSymbol5);
                     runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit9, Boolean.FALSE, Lit10);
-                    runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit11, "Fixed", simpleSymbol3);
-                    runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit12, "Classic", simpleSymbol3);
-                    Values.writeValues(runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit13, "HTTP-Server", simpleSymbol3), $result);
+                    runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit11, "Fixed", simpleSymbol5);
+                    runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit12, "Classic", simpleSymbol5);
+                    runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit13, "HTTP-Server", simpleSymbol5);
+                    runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit14, Lit15, simpleSymbol3);
+                    Values.writeValues(runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit16, "1.1", simpleSymbol5), $result);
                 } else {
                     addToFormDoAfterCreation(new Promise(lambda$Fn2));
                 }
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    runtime.addToCurrentFormEnvironment(Lit16, this.Screen1$Initialize);
+                    runtime.addToCurrentFormEnvironment(Lit17, this.Screen1$Initialize);
                 } else {
-                    addToFormEnvironment(Lit16, this.Screen1$Initialize);
+                    addToFormEnvironment(Lit17, this.Screen1$Initialize);
                 }
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
                     EventDispatcher.registerEventForDelegation((HandlesEventDispatching) runtime.$Stthis$Mnform$St, "Screen1", "Initialize");
                 } else {
-                    addToEvents(simpleSymbol, Lit17);
+                    addToEvents(simpleSymbol, Lit18);
                 }
                 this.HorizontalArrangement1 = null;
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    Values.writeValues(runtime.addComponentWithinRepl(simpleSymbol, Lit18, Lit19, lambda$Fn3), $result);
+                    Values.writeValues(runtime.addComponentWithinRepl(simpleSymbol, Lit19, Lit20, lambda$Fn3), $result);
                 } else {
-                    addToComponents(simpleSymbol, Lit24, Lit19, lambda$Fn4);
+                    addToComponents(simpleSymbol, Lit24, Lit20, lambda$Fn4);
                 }
                 this.CampoDeTexto1 = null;
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    Values.writeValues(runtime.addComponentWithinRepl(Lit19, Lit25, Lit26, lambda$Fn5), $result);
+                    Values.writeValues(runtime.addComponentWithinRepl(Lit20, Lit25, Lit26, lambda$Fn5), $result);
                 } else {
-                    addToComponents(Lit19, Lit28, Lit26, lambda$Fn6);
+                    addToComponents(Lit20, Lit28, Lit26, lambda$Fn6);
                 }
                 this.f0Botn3 = null;
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    Values.writeValues(runtime.addComponentWithinRepl(Lit19, Lit29, Lit30, lambda$Fn7), $result);
+                    Values.writeValues(runtime.addComponentWithinRepl(Lit20, Lit29, Lit30, lambda$Fn7), $result);
                 } else {
-                    addToComponents(Lit19, Lit32, Lit30, lambda$Fn8);
+                    addToComponents(Lit20, Lit32, Lit30, lambda$Fn8);
                 }
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
                     runtime.addToCurrentFormEnvironment(Lit43, this.f1Botn3$Click);
@@ -456,59 +473,75 @@ public class Screen1 extends Form implements Runnable {
                 } else {
                     addToEvents(Lit61, Lit44);
                 }
+                this.FilePicker1 = null;
+                if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
+                    Values.writeValues(runtime.addComponentWithinRepl(simpleSymbol, Lit65, Lit66, lambda$Fn17), $result);
+                } else {
+                    addToComponents(simpleSymbol, Lit68, Lit66, lambda$Fn18);
+                }
+                if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
+                    runtime.addToCurrentFormEnvironment(Lit74, this.FilePicker1$AfterPicking);
+                } else {
+                    addToFormEnvironment(Lit74, this.FilePicker1$AfterPicking);
+                }
+                if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
+                    EventDispatcher.registerEventForDelegation((HandlesEventDispatching) runtime.$Stthis$Mnform$St, "FilePicker1", "AfterPicking");
+                } else {
+                    addToEvents(Lit66, Lit75);
+                }
                 this.KIO4_SimpleWebServer1 = null;
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    Values.writeValues(runtime.addComponentWithinRepl(simpleSymbol, Lit65, Lit33, Boolean.FALSE), $result);
+                    Values.writeValues(runtime.addComponentWithinRepl(simpleSymbol, Lit76, Lit33, Boolean.FALSE), $result);
                 } else {
-                    addToComponents(simpleSymbol, Lit66, Lit33, Boolean.FALSE);
+                    addToComponents(simpleSymbol, Lit77, Lit33, Boolean.FALSE);
                 }
                 this.Notifier1 = null;
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    Values.writeValues(runtime.addComponentWithinRepl(simpleSymbol, Lit67, Lit36, Boolean.FALSE), $result);
+                    Values.writeValues(runtime.addComponentWithinRepl(simpleSymbol, Lit78, Lit36, Boolean.FALSE), $result);
                 } else {
-                    addToComponents(simpleSymbol, Lit68, Lit36, Boolean.FALSE);
+                    addToComponents(simpleSymbol, Lit79, Lit36, Boolean.FALSE);
                 }
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    runtime.addToCurrentFormEnvironment(Lit69, this.Notifier1$TextInputCanceled);
+                    runtime.addToCurrentFormEnvironment(Lit89, this.Notifier1$AfterTextInput);
                 } else {
-                    addToFormEnvironment(Lit69, this.Notifier1$TextInputCanceled);
-                }
-                if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    EventDispatcher.registerEventForDelegation((HandlesEventDispatching) runtime.$Stthis$Mnform$St, "Notifier1", "TextInputCanceled");
-                } else {
-                    addToEvents(Lit36, Lit70);
-                }
-                if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    runtime.addToCurrentFormEnvironment(Lit84, this.Notifier1$AfterTextInput);
-                } else {
-                    addToFormEnvironment(Lit84, this.Notifier1$AfterTextInput);
+                    addToFormEnvironment(Lit89, this.Notifier1$AfterTextInput);
                 }
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
                     EventDispatcher.registerEventForDelegation((HandlesEventDispatching) runtime.$Stthis$Mnform$St, "Notifier1", "AfterTextInput");
                 } else {
-                    addToEvents(Lit36, Lit85);
+                    addToEvents(Lit36, Lit90);
                 }
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    runtime.addToCurrentFormEnvironment(Lit89, this.Notifier1$AfterChoosing);
+                    runtime.addToCurrentFormEnvironment(Lit91, this.Notifier1$TextInputCanceled);
                 } else {
-                    addToFormEnvironment(Lit89, this.Notifier1$AfterChoosing);
+                    addToFormEnvironment(Lit91, this.Notifier1$TextInputCanceled);
+                }
+                if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
+                    EventDispatcher.registerEventForDelegation((HandlesEventDispatching) runtime.$Stthis$Mnform$St, "Notifier1", "TextInputCanceled");
+                } else {
+                    addToEvents(Lit36, Lit92);
+                }
+                if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
+                    runtime.addToCurrentFormEnvironment(Lit96, this.Notifier1$AfterChoosing);
+                } else {
+                    addToFormEnvironment(Lit96, this.Notifier1$AfterChoosing);
                 }
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
                     EventDispatcher.registerEventForDelegation((HandlesEventDispatching) runtime.$Stthis$Mnform$St, "Notifier1", "AfterChoosing");
                 } else {
-                    addToEvents(Lit36, Lit90);
+                    addToEvents(Lit36, Lit97);
                 }
                 this.Web1 = null;
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    Values.writeValues(runtime.addComponentWithinRepl(simpleSymbol, Lit91, Lit92, Boolean.FALSE), $result);
+                    Values.writeValues(runtime.addComponentWithinRepl(simpleSymbol, Lit98, Lit99, Boolean.FALSE), $result);
                 } else {
-                    addToComponents(simpleSymbol, Lit93, Lit92, Boolean.FALSE);
+                    addToComponents(simpleSymbol, Lit100, Lit99, Boolean.FALSE);
                 }
                 this.Device1 = null;
                 if (runtime.$Stthis$Mnis$Mnthe$Mnrepl$St != Boolean.FALSE) {
-                    Values.writeValues(runtime.addComponentWithinRepl(simpleSymbol, Lit94, Lit38, Boolean.FALSE), $result);
+                    Values.writeValues(runtime.addComponentWithinRepl(simpleSymbol, Lit101, Lit38, Boolean.FALSE), $result);
                 } else {
-                    addToComponents(simpleSymbol, Lit95, Lit38, Boolean.FALSE);
+                    addToComponents(simpleSymbol, Lit102, Lit38, Boolean.FALSE);
                 }
                 runtime.initRuntime();
             } catch (ClassCastException e) {
@@ -521,39 +554,44 @@ public class Screen1 extends Form implements Runnable {
 
     static Object lambda3() {
         SimpleSymbol simpleSymbol = Lit0;
-        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit3, Lit4, Lit5);
-        SimpleSymbol simpleSymbol2 = Lit6;
-        SimpleSymbol simpleSymbol3 = Lit7;
-        runtime.setAndCoerceProperty$Ex(simpleSymbol, simpleSymbol2, "HTTP-Server", simpleSymbol3);
-        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit8, "unspecified", simpleSymbol3);
+        SimpleSymbol simpleSymbol2 = Lit3;
+        IntNum intNum = Lit4;
+        SimpleSymbol simpleSymbol3 = Lit5;
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, simpleSymbol2, intNum, simpleSymbol3);
+        SimpleSymbol simpleSymbol4 = Lit6;
+        SimpleSymbol simpleSymbol5 = Lit7;
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, simpleSymbol4, "HTTP-Server", simpleSymbol5);
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit8, "unspecified", simpleSymbol5);
         runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit9, Boolean.FALSE, Lit10);
-        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit11, "Fixed", simpleSymbol3);
-        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit12, "Classic", simpleSymbol3);
-        return runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit13, "HTTP-Server", simpleSymbol3);
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit11, "Fixed", simpleSymbol5);
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit12, "Classic", simpleSymbol5);
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit13, "HTTP-Server", simpleSymbol5);
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit14, Lit15, simpleSymbol3);
+        return runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit16, "1.1", simpleSymbol5);
     }
 
     public Object Screen1$Initialize() {
         runtime.setThisForm();
-        return runtime.callComponentMethod(Lit0, Lit14, LList.list1(Permission.ReadExternalStorage), Lit15);
+        return runtime.lookupGlobalVarInCurrentFormEnvironment(Lit2, runtime.$Stthe$Mnnull$Mnvalue$St);
     }
 
     static Object lambda4() {
-        SimpleSymbol simpleSymbol = Lit19;
+        SimpleSymbol simpleSymbol = Lit20;
         SimpleSymbol simpleSymbol2 = Lit3;
         IntNum intNum = Lit4;
         SimpleSymbol simpleSymbol3 = Lit5;
         runtime.setAndCoerceProperty$Ex(simpleSymbol, simpleSymbol2, intNum, simpleSymbol3);
-        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit20, Lit21, simpleSymbol3);
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit21, Lit15, simpleSymbol3);
         return runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit22, Lit23, simpleSymbol3);
     }
 
     static Object lambda5() {
-        SimpleSymbol simpleSymbol = Lit19;
+        SimpleSymbol simpleSymbol = Lit20;
         SimpleSymbol simpleSymbol2 = Lit3;
         IntNum intNum = Lit4;
         SimpleSymbol simpleSymbol3 = Lit5;
         runtime.setAndCoerceProperty$Ex(simpleSymbol, simpleSymbol2, intNum, simpleSymbol3);
-        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit20, Lit21, simpleSymbol3);
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit21, Lit15, simpleSymbol3);
         return runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit22, Lit23, simpleSymbol3);
     }
 
@@ -590,7 +628,7 @@ public class Screen1 extends Form implements Runnable {
 
     public Object ServeFile$Click() {
         runtime.setThisForm();
-        return runtime.callComponentMethod(Lit36, Lit48, LList.list3("Enter \"example\" to serve the example file, otherwise enter the file path of an HTML file on your device (e.g /storage/emulated/0/Download/index.html leads to index.html in Downloads on your phone).", "File path of content to serve", Boolean.TRUE), Lit49);
+        return runtime.callComponentMethod(Lit36, Lit48, LList.list3("Enter \"example\" to serve the example file, or enter \"custom\" to pick a file using a file picker", "File path of content to serve", Boolean.TRUE), Lit49);
     }
 
     static Object lambda12() {
@@ -625,7 +663,7 @@ public class Screen1 extends Form implements Runnable {
         SimpleSymbol simpleSymbol = Lit36;
         SimpleSymbol simpleSymbol2 = Lit57;
         Pair list1 = LList.list1("If you are sure that you want to stop the server, press \"Yes\", or else press \"No\".");
-        LList.chain4(list1, "Do you really want to stop the server?", "Yes", "No", Boolean.FALSE);
+        LList.chain4(list1, "Do you really want to stop the server?", "No", "Yes", Boolean.FALSE);
         return runtime.callComponentMethod(simpleSymbol, simpleSymbol2, list1, Lit58);
     }
 
@@ -642,52 +680,60 @@ public class Screen1 extends Form implements Runnable {
         return runtime.callYailPrimitive(runtime.open$Mnanother$Mnscreen, LList.list1("Screen2"), Lit63, "open another screen");
     }
 
-    public Object Notifier1$TextInputCanceled() {
+    static Object lambda18() {
+        SimpleSymbol simpleSymbol = Lit66;
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit31, "Text for FilePicker1", Lit7);
+        return runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit67, Boolean.FALSE, Lit10);
+    }
+
+    static Object lambda19() {
+        SimpleSymbol simpleSymbol = Lit66;
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit31, "Text for FilePicker1", Lit7);
+        return runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit67, Boolean.FALSE, Lit10);
+    }
+
+    public Object FilePicker1$AfterPicking() {
         runtime.setThisForm();
-        return runtime.lookupGlobalVarInCurrentFormEnvironment(Lit2, runtime.$Stthe$Mnnull$Mnvalue$St);
+        runtime.callComponentMethod(Lit33, Lit46, LList.list1(runtime.getProperty$1(Lit66, Lit69)), Lit70);
+        return runtime.callComponentMethod(Lit36, Lit37, LList.list3(runtime.callYailPrimitive(strings.string$Mnappend, LList.list3("You can visit ", runtime.callComponentMethod(Lit38, Lit39, LList.list1(Boolean.TRUE), Lit71), ":8080 in your browser to access the server!"), Lit72, "join"), "Serving!", "OK"), Lit73);
     }
 
     public Object Notifier1$AfterTextInput(Object $response) {
         Object obj;
-        PairWithPosition pairWithPosition;
-        Pair pair;
+        Object obj2;
+        Object obj3;
         SimpleSymbol simpleSymbol;
         SimpleSymbol simpleSymbol2;
-        Object obj2;
         Object $response2 = runtime.sanitizeComponentData($response);
         runtime.setThisForm();
-        ModuleMethod moduleMethod = runtime.yail$Mnnot;
-        ModuleMethod moduleMethod2 = runtime.yail$Mnequal$Qu;
+        ModuleMethod moduleMethod = runtime.yail$Mnequal$Qu;
         if ($response2 instanceof Package) {
-            obj = runtime.signalRuntimeError(strings.stringAppend("The variable ", runtime.getDisplayRepresentation(Lit71), " is not bound in the current context"), "Unbound Variable");
+            obj = runtime.signalRuntimeError(strings.stringAppend("The variable ", runtime.getDisplayRepresentation(Lit80), " is not bound in the current context"), "Unbound Variable");
         } else {
             obj = $response2;
         }
-        if (runtime.callYailPrimitive(moduleMethod, LList.list1(runtime.callYailPrimitive(moduleMethod2, LList.list2(obj, "example"), Lit72, "=")), Lit73, "not") != Boolean.FALSE) {
+        if (runtime.callYailPrimitive(moduleMethod, LList.list2(obj, "example"), Lit81, "=") != Boolean.FALSE) {
             SimpleSymbol simpleSymbol3 = Lit33;
             SimpleSymbol simpleSymbol4 = Lit46;
-            if ($response2 instanceof Package) {
-                obj2 = runtime.signalRuntimeError(strings.stringAppend("The variable ", runtime.getDisplayRepresentation(Lit71), " is not bound in the current context"), "Unbound Variable");
-            } else {
-                obj2 = $response2;
-            }
-            runtime.callComponentMethod(simpleSymbol3, simpleSymbol4, LList.list1(obj2), Lit74);
+            ModuleMethod moduleMethod2 = strings.string$Mnappend;
+            SimpleSymbol simpleSymbol5 = Lit38;
+            runtime.callComponentMethod(simpleSymbol3, simpleSymbol4, LList.list1(runtime.callYailPrimitive(moduleMethod2, LList.list2(runtime.callComponentMethod(simpleSymbol5, Lit82, LList.Empty, LList.Empty), "/resources/assets/index.htm"), Lit83, "join")), Lit84);
             simpleSymbol2 = Lit36;
             simpleSymbol = Lit37;
-            pair = LList.list3(runtime.callYailPrimitive(strings.string$Mnappend, LList.list3("You can visit ", runtime.callComponentMethod(Lit38, Lit39, LList.list1(Boolean.TRUE), Lit75), ":8080 in your browser to access the server!"), Lit76, "join"), "Serving!", "OK");
-            pairWithPosition = Lit77;
+            obj3 = LList.list3(runtime.callYailPrimitive(strings.string$Mnappend, LList.list3("You can visit ", runtime.callComponentMethod(simpleSymbol5, Lit39, LList.list1(Boolean.TRUE), Lit85), ":8080 in your browser to access the server!"), Lit86, "join"), "Serving!", "OK");
+            obj2 = Lit87;
         } else {
-            SimpleSymbol simpleSymbol5 = Lit33;
-            SimpleSymbol simpleSymbol6 = Lit46;
-            ModuleMethod moduleMethod3 = strings.string$Mnappend;
-            SimpleSymbol simpleSymbol7 = Lit38;
-            runtime.callComponentMethod(simpleSymbol5, simpleSymbol6, LList.list1(runtime.callYailPrimitive(moduleMethod3, LList.list2(runtime.callComponentMethod(simpleSymbol7, Lit78, LList.Empty, LList.Empty), "/index.htm"), Lit79, "join")), Lit80);
-            simpleSymbol2 = Lit36;
-            simpleSymbol = Lit37;
-            pair = LList.list3(runtime.callYailPrimitive(strings.string$Mnappend, LList.list3("You can visit ", runtime.callComponentMethod(simpleSymbol7, Lit39, LList.list1(Boolean.TRUE), Lit81), ":8080 in your browser to access the server!"), Lit82, "join"), "Serving!", "OK");
-            pairWithPosition = Lit83;
+            simpleSymbol2 = Lit66;
+            simpleSymbol = Lit88;
+            obj3 = LList.Empty;
+            obj2 = LList.Empty;
         }
-        return runtime.callComponentMethod(simpleSymbol2, simpleSymbol, pair, pairWithPosition);
+        return runtime.callComponentMethod(simpleSymbol2, simpleSymbol, obj3, obj2);
+    }
+
+    public Object Notifier1$TextInputCanceled() {
+        runtime.setThisForm();
+        return runtime.lookupGlobalVarInCurrentFormEnvironment(Lit2, runtime.$Stthe$Mnnull$Mnvalue$St);
     }
 
     public Object Notifier1$AfterChoosing(Object $choice) {
@@ -696,11 +742,11 @@ public class Screen1 extends Form implements Runnable {
         runtime.setThisForm();
         ModuleMethod moduleMethod = runtime.yail$Mnequal$Qu;
         if ($choice2 instanceof Package) {
-            obj = runtime.signalRuntimeError(strings.stringAppend("The variable ", runtime.getDisplayRepresentation(Lit86), " is not bound in the current context"), "Unbound Variable");
+            obj = runtime.signalRuntimeError(strings.stringAppend("The variable ", runtime.getDisplayRepresentation(Lit93), " is not bound in the current context"), "Unbound Variable");
         } else {
             obj = $choice2;
         }
-        return runtime.callYailPrimitive(moduleMethod, LList.list2(obj, "Yes"), Lit87, "=") != Boolean.FALSE ? runtime.callComponentMethod(Lit33, Lit88, LList.Empty, LList.Empty) : Values.empty;
+        return runtime.callYailPrimitive(moduleMethod, LList.list2(obj, "Yes"), Lit94, "=") != Boolean.FALSE ? runtime.callComponentMethod(Lit33, Lit95, LList.Empty, LList.Empty) : Values.empty;
     }
 
     /* compiled from: Screen1.yail */
@@ -761,8 +807,8 @@ public class Screen1 extends Form implements Runnable {
                     callContext.proc = moduleMethod;
                     callContext.pc = 1;
                     return 0;
-                case 41:
-                case 42:
+                case 43:
+                case 45:
                     callContext.value1 = obj;
                     callContext.proc = moduleMethod;
                     callContext.pc = 1;
@@ -911,9 +957,9 @@ public class Screen1 extends Form implements Runnable {
                 case 14:
                     this.$main.processException(obj);
                     return Values.empty;
-                case 41:
+                case 43:
                     return this.$main.Notifier1$AfterTextInput(obj);
-                case 42:
+                case 45:
                     return this.$main.Notifier1$AfterChoosing(obj);
                 default:
                     return super.apply1(moduleMethod, obj);
@@ -1057,6 +1103,12 @@ public class Screen1 extends Form implements Runnable {
                 case 39:
                     return this.$main.Button1$Click();
                 case 40:
+                    return Screen1.lambda18();
+                case 41:
+                    return Screen1.lambda19();
+                case 42:
+                    return this.$main.FilePicker1$AfterPicking();
+                case 44:
                     return this.$main.Notifier1$TextInputCanceled();
                 default:
                     return super.apply0(moduleMethod);
@@ -1094,6 +1146,9 @@ public class Screen1 extends Form implements Runnable {
                 case 38:
                 case 39:
                 case 40:
+                case 41:
+                case 42:
+                case 44:
                     callContext.proc = moduleMethod;
                     callContext.pc = 0;
                     return 0;
