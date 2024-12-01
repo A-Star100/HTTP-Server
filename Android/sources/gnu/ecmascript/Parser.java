@@ -91,13 +91,13 @@ public class Parser {
             } else {
                 exps = new Expression[2];
             }
-            int newsize = nExps + 1;
+            int nExps2 = nExps + 1;
             exps[nExps] = exp1;
             if (last) {
                 return new BeginExp(exps);
             }
             skipToken();
-            nExps = newsize;
+            nExps = nExps2;
         }
     }
 

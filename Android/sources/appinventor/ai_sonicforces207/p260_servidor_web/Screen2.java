@@ -150,13 +150,13 @@ public class Screen2 extends Form implements Runnable {
     static {
         SimpleSymbol simpleSymbol = (SimpleSymbol) new SimpleSymbol(PropertyTypeConstants.PROPERTY_TYPE_TEXT).readResolve();
         Lit7 = simpleSymbol;
-        Lit31 = PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110892), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110887), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110881);
-        Lit30 = PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110839), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110834), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110829), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110824), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110818);
-        Lit20 = PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 82160);
-        Lit19 = PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 82143), "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 82137);
+        Lit31 = PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110896), "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110891), "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110885);
+        Lit30 = PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110843), "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110838), "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110833), "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110828), "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 110822);
+        Lit20 = PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 82160);
+        Lit19 = PairWithPosition.make(simpleSymbol, PairWithPosition.make(simpleSymbol, LList.Empty, "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 82143), "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 82137);
         SimpleSymbol simpleSymbol2 = (SimpleSymbol) new SimpleSymbol(PropertyTypeConstants.PROPERTY_TYPE_BOOLEAN).readResolve();
         Lit10 = simpleSymbol2;
-        Lit18 = PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733012451832_3892116741358437376-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 82115);
+        Lit18 = PairWithPosition.make(simpleSymbol2, LList.Empty, "/tmp/1733016886162_4606834975995045888-0/youngandroidproject/../src/appinventor/ai_sonicforces207/p260_servidor_web/Screen2.yail", 82115);
     }
 
     public Screen2() {
@@ -180,7 +180,7 @@ public class Screen2 extends Form implements Runnable {
         this.dispatchGenericEvent = new ModuleMethod(frame2, 16, Lit56, 16388);
         this.lookup$Mnhandler = new ModuleMethod(frame2, 17, Lit57, 8194);
         ModuleMethod moduleMethod = new ModuleMethod(frame2, 18, (Object) null, 0);
-        moduleMethod.setProperty("source-location", "/tmp/runtime3632589216760299250.scm:634");
+        moduleMethod.setProperty("source-location", "/tmp/runtime1488391760221600366.scm:634");
         lambda$Fn1 = moduleMethod;
         this.$define = new ModuleMethod(frame2, 19, "$define", 0);
         lambda$Fn2 = new ModuleMethod(frame2, 20, (Object) null, 0);
@@ -230,9 +230,9 @@ public class Screen2 extends Form implements Runnable {
             runtime.setAndCoerceProperty$Ex(simpleSymbol, simpleSymbol2, "p260_servidor_web", simpleSymbol3);
             runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit8, "unspecified", simpleSymbol3);
             runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit9, Boolean.FALSE, Lit10);
-            runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit11, "Fixed", simpleSymbol3);
+            runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit11, "Responsive", simpleSymbol3);
             runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit12, "Classic", simpleSymbol3);
-            Values.writeValues(runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit13, "Screen2", simpleSymbol3), $result);
+            Values.writeValues(runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit13, "WebViewer", simpleSymbol3), $result);
         } else {
             addToFormDoAfterCreation(new Promise(lambda$Fn2));
         }
@@ -301,9 +301,9 @@ public class Screen2 extends Form implements Runnable {
         runtime.setAndCoerceProperty$Ex(simpleSymbol, simpleSymbol2, "p260_servidor_web", simpleSymbol3);
         runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit8, "unspecified", simpleSymbol3);
         runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit9, Boolean.FALSE, Lit10);
-        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit11, "Fixed", simpleSymbol3);
+        runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit11, "Responsive", simpleSymbol3);
         runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit12, "Classic", simpleSymbol3);
-        return runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit13, "Screen2", simpleSymbol3);
+        return runtime.setAndCoerceProperty$Ex(simpleSymbol, Lit13, "WebViewer", simpleSymbol3);
     }
 
     public Object Screen2$Initialize() {
@@ -338,7 +338,7 @@ public class Screen2 extends Form implements Runnable {
         } else {
             obj3 = $description2;
         }
-        LList.chain4(list1, "", obj2, "", obj3);
+        LList.chain4(list1, "  ", obj2, "  ", obj3);
         return runtime.callComponentMethod(simpleSymbol, simpleSymbol2, LList.list3(runtime.callYailPrimitive(moduleMethod, list1, Lit30, "join"), "WebViewer Error", "OK"), Lit31);
     }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.1" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" package="appinventor.ai_sonicforces207.p260_servidor_web" platformBuildVersionCode="34" platformBuildVersionName="14">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="3" android:versionName="1.2" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" package="appinventor.ai_sonicforces207.p260_servidor_web" platformBuildVersionCode="34" platformBuildVersionName="14">
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -14,6 +14,11 @@
     <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="34"/>
     <application android:theme="@style/AppTheme" android:label="HTTP-Server" android:icon="@mipmap/ic_launcher" android:name="com.google.appinventor.components.runtime.multidex.MultiDexApplication" android:debuggable="false" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_launcher" android:requestLegacyExternalStorage="true" android:preserveLegacyExternalStorage="true">
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:name="appinventor.ai_sonicforces207.p260_servidor_web.Advanced" android:exported="true" android:screenOrientation="unspecified" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".Screen1" android:exported="true" android:screenOrientation="unspecified" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

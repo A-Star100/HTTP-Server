@@ -484,9 +484,9 @@ public class ConstraintLayout extends ViewGroup {
                             View view5 = child3;
                             resolvedLeftToLeft3 = resolvedRightToLeft;
                             resolvedRightToLeft2 = resolvedRightToRight;
-                            int helperCount6 = resolveGoneLeftMargin;
+                            int resolvedLeftToRight4 = resolveGoneLeftMargin;
                             layoutParams = layoutParams2;
-                            if (!(helperCount6 == -1 || (target4 = getTargetWidget(helperCount6)) == null)) {
+                            if (!(resolvedLeftToRight4 == -1 || (target4 = getTargetWidget(resolvedLeftToRight4)) == null)) {
                                 widget2.immediateConnect(ConstraintAnchor.Type.LEFT, target4, ConstraintAnchor.Type.RIGHT, layoutParams.leftMargin, resolvedLeftToLeft);
                             }
                         }

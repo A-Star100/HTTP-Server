@@ -126,19 +126,19 @@ public class DateTime extends Quantity implements Cloneable {
         }
         int pos = start;
         if ((mask2 & 2) != 0) {
-            int part = parseDigits(str, pos);
-            int year2 = part >> 16;
-            pos = part & SupportMenu.USER_MASK;
+            int year2 = parseDigits(str, pos);
+            int year3 = year2 >> 16;
+            pos = year2 & SupportMenu.USER_MASK;
             if (pos != start + 4 && (pos <= start + 4 || str.charAt(start) == '0')) {
                 return -1;
             }
-            if (negYear || year2 == 0) {
+            if (negYear || year3 == 0) {
                 this.calendar.set(0, 0);
-                this.calendar.set(1, year2 + 1);
+                this.calendar.set(1, year3 + 1);
             } else {
-                this.calendar.set(1, year2);
+                this.calendar.set(1, year3);
             }
-            year = year2;
+            year = year3;
         } else if (!negYear) {
             return -1;
         } else {
@@ -153,9 +153,9 @@ public class DateTime extends Quantity implements Cloneable {
         int pos2 = pos + 1;
         int start2 = pos2;
         if ((mask2 & 4) != 0) {
-            int part2 = parseDigits(str, start2);
-            month = part2 >> 16;
-            pos2 = part2 & SupportMenu.USER_MASK;
+            int part = parseDigits(str, start2);
+            month = part >> 16;
+            pos2 = part & SupportMenu.USER_MASK;
             if (month <= 0 || month > 12 || pos2 != start2 + 2) {
                 return -1;
             }
@@ -170,9 +170,9 @@ public class DateTime extends Quantity implements Cloneable {
             return -1;
         }
         int start3 = pos2 + 1;
-        int part3 = parseDigits(str, start3);
-        int day = part3 >> 16;
-        int pos3 = part3 & SupportMenu.USER_MASK;
+        int part2 = parseDigits(str, start3);
+        int day = part2 >> 16;
+        int pos3 = part2 & SupportMenu.USER_MASK;
         if (day > 0 && pos3 == start3 + 2) {
             if ((mask2 & 4) == 0) {
                 maxDay = 31;

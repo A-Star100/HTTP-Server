@@ -601,16 +601,16 @@ public class StringUtils {
         int i = 0;
         while (i < rlen) {
             int i2 = i + 1;
-            char rch = replacement.charAt(i);
-            if (rch == '\\') {
-                if (i2 < rch) {
-                    int i3 = i2 + 1;
-                    char i4 = replacement.charAt(i2);
-                    char rch2 = i4;
-                    if (i4 == '\\' || rch2 == '$') {
-                        i = i3;
+            int i3 = replacement.charAt(i);
+            if (i3 == 92) {
+                if (i2 < i3) {
+                    int i4 = i2 + 1;
+                    char i5 = replacement.charAt(i2);
+                    char rch = i5;
+                    if (i5 == '\\' || rch == '$') {
+                        i = i4;
                     } else {
-                        int i5 = i3;
+                        int i6 = i4;
                     }
                 }
                 throw new IllegalArgumentException("invalid replacement string [FORX0004]");

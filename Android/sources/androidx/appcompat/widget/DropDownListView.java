@@ -163,12 +163,12 @@ class DropDownListView extends ListView {
         int i3 = 0;
         while (i3 < count) {
             int paddingTop2 = paddingTop;
-            int newType = adapter.getItemViewType(i3);
-            if (newType != viewType) {
+            int paddingTop3 = adapter.getItemViewType(i3);
+            if (paddingTop3 != viewType) {
                 child = null;
-                viewType = newType;
+                viewType = paddingTop3;
             }
-            int i4 = newType;
+            int i4 = paddingTop3;
             child = adapter.getView(i3, child, this);
             ViewGroup.LayoutParams childLp2 = child.getLayoutParams();
             if (childLp2 == null) {

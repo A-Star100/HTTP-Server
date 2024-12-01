@@ -99,10 +99,10 @@ public class AlertDialogLayout extends LinearLayoutCompat {
         if (middlePanel != null && remainingHeight > 0) {
             int heightToGive2 = remainingHeight;
             int remainingHeight2 = remainingHeight - heightToGive2;
-            int childHeightSpec2 = View.MeasureSpec.makeMeasureSpec(middleHeight + heightToGive2, heightMode);
-            middlePanel.measure(i, childHeightSpec2);
+            int remainingHeight3 = View.MeasureSpec.makeMeasureSpec(middleHeight + heightToGive2, heightMode);
+            middlePanel.measure(i, remainingHeight3);
             usedHeight = (usedHeight - middleHeight) + middlePanel.getMeasuredHeight();
-            int i4 = childHeightSpec2;
+            int i4 = remainingHeight3;
             childState = View.combineMeasuredStates(childState, middlePanel.getMeasuredState());
             remainingHeight = remainingHeight2;
         }

@@ -229,11 +229,11 @@ public class PrettyWriter extends Writer {
                     break;
                 }
                 int start2 = start + 1;
-                char start3 = str.charAt(start);
-                if (start3 != 10 || this.prettyPrintingMode <= 0) {
+                char ch = str.charAt(start);
+                if (ch != 10 || this.prettyPrintingMode <= 0) {
                     int fillPointer2 = fillPointer + 1;
-                    this.buffer[fillPointer] = start3;
-                    if (start3 != ' ' || this.prettyPrintingMode <= 1 || this.currentBlock >= 0) {
+                    this.buffer[fillPointer] = ch;
+                    if (ch != ' ' || this.prettyPrintingMode <= 1 || this.currentBlock >= 0) {
                         fillPointer = fillPointer2;
                     } else {
                         this.bufferFillPointer = fillPointer2;
@@ -558,35 +558,35 @@ public class PrettyWriter extends Writer {
             this.currentBlock = -1;
             return;
         }
-        int start = this.currentBlock;
+        int suffixPreviousLength2 = this.currentBlock;
         int[] iArr2 = this.queueInts;
-        int outerBlock = iArr2[start + 4];
+        int outerBlock = iArr2[suffixPreviousLength2 + 4];
         if (outerBlock == 0) {
             this.currentBlock = -1;
         } else {
-            int qtailFromStart = this.queueTail - start;
+            int qtailFromStart = this.queueTail - suffixPreviousLength2;
             if (qtailFromStart > 0) {
                 qtailFromStart -= iArr2.length;
             }
             if (outerBlock < qtailFromStart) {
                 this.currentBlock = -1;
             } else {
-                int outerBlock2 = outerBlock + start;
+                int outerBlock2 = outerBlock + suffixPreviousLength2;
                 if (outerBlock2 < 0) {
                     outerBlock2 += iArr2.length;
                 }
                 this.currentBlock = outerBlock2;
             }
         }
-        String suffix2 = this.queueStrings[start + 6];
+        String suffix2 = this.queueStrings[suffixPreviousLength2 + 6];
         if (suffix2 != null) {
             write(suffix2);
         }
-        int endFromStart = end - start;
+        int endFromStart = end - suffixPreviousLength2;
         if (endFromStart < 0) {
             endFromStart += this.queueInts.length;
         }
-        this.queueInts[start + 4] = endFromStart;
+        this.queueInts[suffixPreviousLength2 + 4] = endFromStart;
     }
 
     public void endLogicalBlock(String suffix2) {
@@ -724,10 +724,10 @@ public class PrettyWriter extends Writer {
                 int srcpos = iArr3[blocksUsed + (i3 * 2)];
                 int amount = iArr3[blocksUsed + (i3 * 2) + 1];
                 int column2 = column;
-                int column3 = srcpos + additional;
+                int dstpos = srcpos + additional;
                 int sectionStart2 = sectionStart;
-                System.arraycopy(buffer2, srcpos, newBuffer, column3, end - srcpos);
-                for (int j = column3 - amount; j < column3; j++) {
+                System.arraycopy(buffer2, srcpos, newBuffer, dstpos, end - srcpos);
+                for (int j = dstpos - amount; j < dstpos; j++) {
                     newBuffer[j] = ' ';
                 }
                 additional -= amount;

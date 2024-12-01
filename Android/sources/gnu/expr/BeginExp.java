@@ -176,8 +176,8 @@ public class BeginExp extends Expression {
             }
             out.endLogicalBlock(")");
         }
-        int sizeOptions2 = this.length;
-        for (int i2 = 0; i2 < sizeOptions2; i2++) {
+        int n = this.length;
+        for (int i2 = 0; i2 < n; i2++) {
             out.writeSpaceLinear();
             this.exps[i2].print(out);
         }

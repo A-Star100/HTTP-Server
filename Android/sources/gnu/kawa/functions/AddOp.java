@@ -30,9 +30,9 @@ public class AddOp extends ArithOp {
             case 1:
                 int i2 = code2;
                 int i3 = code;
-                int i1 = Arithmetic.asInt(arg1);
+                int code12 = Arithmetic.asInt(arg1);
                 int i22 = Arithmetic.asInt(arg2);
-                return new Integer(i > 0 ? i1 + i22 : i1 - i22);
+                return new Integer(i > 0 ? code12 + i22 : code12 - i22);
             case 2:
                 int i4 = code2;
                 int i5 = code;

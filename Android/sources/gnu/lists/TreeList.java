@@ -114,12 +114,12 @@ public class TreeList extends AbstractSequence implements Appendable, XConsumer,
         if (objArr == null) {
             tmp = new Object[100];
         } else {
-            int newLength = objArr.length;
-            int newLength2 = newLength * 2;
-            Object[] tmp2 = new Object[newLength2];
-            System.arraycopy(objArr, 0, tmp2, 0, newLength);
-            int i = newLength;
-            int oldLength = newLength2;
+            int oldLength = objArr.length;
+            int newLength = oldLength * 2;
+            Object[] tmp2 = new Object[newLength];
+            System.arraycopy(objArr, 0, tmp2, 0, oldLength);
+            int i = oldLength;
+            int oldLength2 = newLength;
             tmp = tmp2;
         }
         this.objects = tmp;
@@ -591,15 +591,15 @@ public class TreeList extends AbstractSequence implements Appendable, XConsumer,
         ensureSpace(len);
         while (len > 0) {
             int off2 = off + 1;
-            char off3 = buf[off];
+            char ch = buf[off];
             len--;
-            if (off3 <= 40959) {
+            if (ch <= 40959) {
                 char[] cArr = this.data;
                 int i = this.gapStart;
                 this.gapStart = i + 1;
-                cArr[i] = off3;
+                cArr[i] = ch;
             } else {
-                write((int) off3);
+                write((int) ch);
                 ensureSpace(len);
             }
             off = off2;
@@ -617,15 +617,15 @@ public class TreeList extends AbstractSequence implements Appendable, XConsumer,
         ensureSpace(length);
         while (length > 0) {
             int start2 = start + 1;
-            char start3 = str.charAt(start);
+            char ch = str.charAt(start);
             length--;
-            if (start3 <= 40959) {
+            if (ch <= 40959) {
                 char[] cArr = this.data;
                 int i = this.gapStart;
                 this.gapStart = i + 1;
-                cArr[i] = start3;
+                cArr[i] = ch;
             } else {
-                write((int) start3);
+                write((int) ch);
                 ensureSpace(length);
             }
             start = start2;
@@ -2207,14 +2207,14 @@ public class TreeList extends AbstractSequence implements Appendable, XConsumer,
             return -1;
         }
         int pos2 = pos + 1;
-        char pos3 = cArr[pos];
-        if (pos3 <= 40959 || ((pos3 >= OBJECT_REF_SHORT && pos3 <= 61439) || (pos3 >= 45056 && pos3 <= 57343))) {
+        char datum = cArr[pos];
+        if (datum <= 40959 || ((datum >= OBJECT_REF_SHORT && datum <= 61439) || (datum >= 45056 && datum <= 57343))) {
             return pos2;
         }
-        if (pos3 >= BEGIN_ELEMENT_SHORT && pos3 <= 45055) {
+        if (datum >= BEGIN_ELEMENT_SHORT && datum <= 45055) {
             return cArr[pos2] + pos2 + 1;
         }
-        switch (pos3) {
+        switch (datum) {
             case 61696:
             case 61697:
             case JOINER /*61718*/:
@@ -2268,7 +2268,7 @@ public class TreeList extends AbstractSequence implements Appendable, XConsumer,
             case COMMENT /*61719*/:
                 break;
             default:
-                throw new Error("unknown code:" + Integer.toHexString(pos3));
+                throw new Error("unknown code:" + Integer.toHexString(datum));
         }
         return pos2 + 2 + getIntN(pos2);
     }

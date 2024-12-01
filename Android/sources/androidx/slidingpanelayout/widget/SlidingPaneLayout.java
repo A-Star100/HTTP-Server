@@ -344,10 +344,10 @@ public class SlidingPaneLayout extends ViewGroup {
                     child.measure(childWidthSpec, childHeightSpec3);
                     int childWidth = child.getMeasuredWidth();
                     int i5 = childWidthSpec;
-                    int childWidthSpec2 = child.getMeasuredHeight();
+                    int childHeight = child.getMeasuredHeight();
                     float weightSum2 = weightSum;
-                    if (heightMode2 == Integer.MIN_VALUE && childWidthSpec2 > layoutHeight) {
-                        layoutHeight = Math.min(childWidthSpec2, maxLayoutHeight2);
+                    if (heightMode2 == Integer.MIN_VALUE && childHeight > layoutHeight) {
+                        layoutHeight = Math.min(childHeight, maxLayoutHeight2);
                     }
                     widthRemaining -= childWidth;
                     boolean z = widthRemaining < 0;
@@ -403,9 +403,9 @@ public class SlidingPaneLayout extends ViewGroup {
                                             int newWidth = widthAvailable - (lp2.leftMargin + lp2.rightMargin);
                                             fixedPanelWidthLimit = fixedPanelWidthLimit2;
                                             maxLayoutHeight = maxLayoutHeight2;
-                                            int childWidthSpec3 = View.MeasureSpec.makeMeasureSpec(newWidth, Declaration.MODULE_REFERENCE);
+                                            int maxLayoutHeight3 = View.MeasureSpec.makeMeasureSpec(newWidth, Declaration.MODULE_REFERENCE);
                                             if (measuredWidth2 != newWidth) {
-                                                child2.measure(childWidthSpec3, childHeightSpec);
+                                                child2.measure(maxLayoutHeight3, childHeightSpec);
                                             }
                                         } else {
                                             fixedPanelWidthLimit = fixedPanelWidthLimit2;
