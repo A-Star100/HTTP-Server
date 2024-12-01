@@ -14,7 +14,7 @@ To install Homebrew, run
 It is a Unix executable so it should also work on Linux, but has not been tested there.
 
 ### Android
-The Android build was created and compiled with [MIT App Inventor](https://appinventor.mit.edu) and is experimental (so it may not work as seamlessly as the Windows and Mac versions), but still does something nonetheless. It (like 99% of all Android apps) uses Java and since this app is bigger than the Mac and Windows apps, it primarily uses Java, butting out other languages.
+The Android build was created and compiled with [MIT App Inventor](https://appinventor.mit.edu) and is experimental (so it may not work as seamlessly as the Windows and Mac versions), but still does something nonetheless. It (like 99% of all Android apps) uses Java and since this app is bigger than the Mac and Windows apps, it primarily uses Java, butting out other languages. The Android build can only serve raw text data and HTML, though, so you can't serve videos, but it is still nice to be able to serve text and HTML (and you can use [DataURI](https://developer.mozilla.org/en-US/docs/Web/URI/Schemes/data) image URLs anyway to directly embed the image in an HTML which means that you can still show images onscreen, you just can't serve them as separate files.
 
 ## Compile from source
 If you want to compile from source and create modified versions, follow the instructions below:
