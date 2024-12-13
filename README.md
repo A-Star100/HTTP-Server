@@ -3,7 +3,7 @@
 
 HTTP-Server is an application which can start an HTTP server on Windows, Mac, Android, and with a bit of extra configuration, Linux.
 
-### Windows [![Windows](https://www.dropbox.com/scl/fi/sg4snjn55xmuo3ojmi7b5/Screenshot-2024-12-12-at-8.01.03-PM.png?rlkey=zafivkjhfn7haog5law0uf0wt&st=pacazj00&raw=1)](https://github.com/A-Star100/HTTP-Server)
+### Windows [![Windows]()]()
 The Windows build uses .NET Core 6.0 (meaning that Windows 7 and below can't run it) and was compiled using Visual Studio 2022 and uses C#. It uses the HTTPListener to start an HTTP server and listen on a port you specify.
 
 ### Mac
