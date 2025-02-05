@@ -8,9 +8,14 @@ The Windows build uses .NET Core 6.0 (meaning that Windows 7 and below can't run
 
 ### Mac
 The Mac build is plain C and ***requires*** **libmicrohttpd** installed for it to work, otherwise it won't. You can install libmicrohttpd using Homebrew by running
-`brew install libmicrohttpd`. 
+```shell 
+brew install libmicrohttpd
+```
+. 
 To install Homebrew, run
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 It is a Unix executable so it should also work on Linux, but has not been tested there.
 
 ### Android
@@ -24,16 +29,25 @@ Open the *Program.cs* file, then in your editor modify the C# however you please
 ### Mac
 Use TextEdit (or any IDE) and open *file_server.c* and edit the C however you please!
 Then use clang to compile into an ARM64 binary by running
-`clang -arch arm64 -o MyApplication-ARM file_server.c -I/opt/homebrew/include -L/opt/homebrew/lib -lmicrohttpd`
+```shell
+clang -arch arm64 -o MyApplication-ARM file_server.c -I/opt/homebrew/include -L/opt/homebrew/lib -lmicrohttpd
+```
 then compile into an Intel (x86_64) binary by running
-`clang -arch x86_64 -o MyApplication-x86_64 file_server.c -I/opt/homebrew/include -L/opt/homebrew/lib -lmicrohttpd`
+```shell
+clang -arch x86_64 -o MyApplication-x86_64 file_server.c -I/opt/homebrew/include -L/opt/homebrew/lib -lmicrohttpd
+```
 then use lipo to compile both into a universal (x86_64 and ARM64 compatible binary) by running
-`lipo -create -output MyApplication-Universal MyApplication-x86_64 MyApplication-ARM`
+```shell
+lipo -create -output MyApplication-Universal MyApplication-x86_64 MyApplication-ARM
+```
 and you have created a universal binary of the program by yourself! Congratulations!
 
 (The command above utilizes a ***Homebrew*** installation of *libmicrohttpd*, so users need libmicrohttpd installed from Homebrew if you use the command above. You can modify it to your liking).
 You can also use CMake by running
-`cmake -E chdir . /usr/bin/gcc main.c -o main` (this example assumes *main.c* is your C app) 
+```shell
+cmake -E chdir . /usr/bin/gcc main.c -o main
+```
+(this example assumes *main.c* is your C app) 
 ### Android
 Download the AIA file (1.1.aia) from the *Android* folder. Then visit [MIT App Inventor's website](https://appinventor.mit.edu), click *Create Apps*, click *Projects* (after signing in), then click *Import project (.aia) from computer*, select the AIA file you downloaded from this repo, then after the project has been imported, click *Build*, then choose whichever distribution method you please.
 
