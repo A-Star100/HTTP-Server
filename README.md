@@ -35,10 +35,10 @@ and you have created a universal binary of the program by yourself! Congratulati
 You can also use CMake by running
 `cmake -E chdir . /usr/bin/gcc main.c -o main` (this example assumes *main.c* is your C app) 
 ### Android
-You can use [Android Studio](https://developer.android.com/studio) to compile the decompiled source code or compile with *just* Gradle [by using this method](https://stackoverflow.com/questions/39538021/compiling-android-source-code). 
+Download the AIA file from the *aia* folder. Then visit [MIT App Inventor's website](https://appinventor.mit.edu), click *Create Apps*, click *Projects* (after signing in), then click *Import Project*, then after the projects has been imported, click *Build*, then choose whichever distribution method you please.
 
 ## How to open
-Most if not all releases of this app _**will be unsigned**_, so here's how to open them Windows, Mac, and Android
+Most if not all releases of this app _**will be unsigned**_ (not on Android, however), so here's how to open them Windows, Mac, and Android
 ### On Windows
 When you try to open the app, you will come across a SmartScreen warning. Press "More..." and then click "Run Anyway".
 ### On Mac
