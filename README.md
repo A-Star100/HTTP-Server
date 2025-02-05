@@ -14,7 +14,7 @@ To install Homebrew, run
 It is a Unix executable so it should also work on Linux, but has not been tested there.
 
 ### Android
-The Android build was created and compiled with [MIT App Inventor](https://appinventor.mit.edu) and is experimental (so it may not work as seamlessly as the Windows and Mac versions), but still does something nonetheless. It (like 99% of all Android apps) uses Java and since this app is bigger than the Mac and Windows apps, it primarily uses Java, butting out other languages. 
+The Android build was created and compiled with [MIT App Inventor](https://appinventor.mit.edu) and is experimental (so it may not work as seamlessly as the Windows and Mac versions), but still does something nonetheless. It uses Java.
 ****-*The Android build can only serve raw text data.*-****
 ## Compile from source
 If you want to compile from source and create modified versions, follow the instructions below:
@@ -35,7 +35,7 @@ and you have created a universal binary of the program by yourself! Congratulati
 You can also use CMake by running
 `cmake -E chdir . /usr/bin/gcc main.c -o main` (this example assumes *main.c* is your C app) 
 ### Android
-Download the AIA file from the *aia* folder. Then visit [MIT App Inventor's website](https://appinventor.mit.edu), click *Create Apps*, click *Projects* (after signing in), then click *Import project (.aia) from computer*, select the AIA file you downloaded from this repo, then after the project has been imported, click *Build*, then choose whichever distribution method you please.
+Download the AIA file (1.1.aia) from the *Android* folder. Then visit [MIT App Inventor's website](https://appinventor.mit.edu), click *Create Apps*, click *Projects* (after signing in), then click *Import project (.aia) from computer*, select the AIA file you downloaded from this repo, then after the project has been imported, click *Build*, then choose whichever distribution method you please.
 
 ## How to open
 Most if not all releases of this app _**will be unsigned**_ (not on Android, however), so here's how to open them Windows, Mac, and Android
