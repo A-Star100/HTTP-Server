@@ -1,5 +1,5 @@
 # HTTP-Server
-[![latest release](https://a-star100.github.io/images/http-server-release.svg)](https://github.com/A-Star100/HTTP-Server)
+[![latest release](https://anirudhsevugan.me/images/http-server-release.svg)](https://github.com/A-Star100/HTTP-Server)
 
 HTTP-Server is an application which can start an HTTP server on Windows, Mac, Android, and with a bit of extra configuration, Linux.
 
